@@ -13,7 +13,11 @@
   inputs:
     command: 'validate'
     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$()'
+    backendType: 'azurerm'
+    backendServiceArm: 'Azure-resource-core'
     allowTelemetryCollection: true
+    backendAzureRmResourceGroupName: 'terraform-backend-rg'
+    backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'storageaccaforo255'
     backendAzureRmContainerName: 'storageaccaforo255container'
     backendAzureRmKey: 'Kubernetes-dev.tfstate'
