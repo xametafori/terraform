@@ -1,4 +1,17 @@
 # Starter pipeline
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/azure-terraform/kubernetes/'
+    backendType: 'azurerm'
+    backendServiceArm: 'Azure-resource-core'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'terraform-backend-rg'
+    backendAzureRmResourceGroupLocation: 'westeurope'
+    backendAzureRmStorageAccountName: 'storageaccaforo255'
+    backendAzureRmContainerName: 'storageaccaforo255container'
+    backendAzureRmKey: 'Kubernetes-dev.tfstate'
+    allowTelemetryCollection: true
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
