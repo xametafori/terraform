@@ -1,4 +1,8 @@
 # Starter pipeline
+- task: DownloadSecureFile@1
+  name: publickey
+  inputs:
+    secureFile: 'id_rsa.pub'
 - task: TerraformCLI@0
 
   inputs:
